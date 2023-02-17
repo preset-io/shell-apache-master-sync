@@ -53,7 +53,7 @@ podTemplate(
                 }
 
                 stage('Update file permissions') {
-                    sh "chmod 744 -R ./superset-shell"
+                    sh "chmod 777 -R ./superset-shell"
                 }
 
                 stage('Point submodule at latest master') {
