@@ -39,7 +39,7 @@ podTemplate(
                     keyFileVariable: 'SSH_KEY_GITHUB')]) {
                 
                 stage('Configure Git') {
-                    sh "./configure_git.sh"
+                    sh "bash ./configure_git.sh"
                 }
 
                 stage('Clone superset-shell') {
