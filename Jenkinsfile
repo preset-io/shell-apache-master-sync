@@ -54,6 +54,8 @@ podTemplate(
 
                 stage('Point submodule at latest master') {
                     dir('superset-shell/superset') {
+                        sh "ls"
+                        sh "git status"
                         sh "git checkout master"
                     }
                 }
