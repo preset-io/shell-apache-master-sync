@@ -52,6 +52,10 @@ podTemplate(
                     }
                 }
 
+                stage('Update file permissions') {
+                    sh "chmod 744 -R ./superset-shell"
+                }
+
                 stage('Point submodule at latest master') {
                     dir('superset-shell/superset') {
                         sh "ls"
