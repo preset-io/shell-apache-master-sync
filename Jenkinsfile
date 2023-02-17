@@ -40,6 +40,8 @@ podTemplate(
                 
                 stage('Configure Git') {
                     sh "bash ./configure_git.sh"
+                    sh 'git config --global user.email "machine@preset.io"'
+                    sh 'git config --global user.name "Preset Machine"'
                 }
 
                 stage('Clone superset-shell') {
