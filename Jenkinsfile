@@ -58,14 +58,14 @@ podTemplate(
 
                 stage('Point submodule at latest master') {
                     dir('superset-shell/superset') {
-                        sh "ls"
-                        sh "git status"
+                        sh "git stash"
                         sh "git checkout master"
                     }
                 }
 
                 stage('Commit and push to shell-apache-master-sync') {
                     dir('superset-shell') {
+                        sh "git status"
                         sh "git checkout -b shell-apache-master-sync"
                         sh 'git add superset'
                         sh 'git commit -m "Point superset at latest master"'
